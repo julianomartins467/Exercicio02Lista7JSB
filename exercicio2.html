@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/restom.css">
+    <style>
+        
+        
+        .principal{
+                     
+            display: inline-flex;
+            
+            padding-left: 250px;
+           
+            height: 450px;
+            align-items: center;
+            width: 100%;
+        }
+        .secundaria{
+            background-color: rgb(186, 241, 148);
+            align-items: center;
+            text-align: center;
+            height: 280px;
+            margin: 2px;
+            padding-top: 15px;
+            padding-bottom: 20px;
+            width: 210px;
+            font-weight: bolder;
+            border: black solid 2px;       
+            
+        }
+        img:hover{
+            background-color: brown;
+        }
+        div.secundaria:hover{
+    background-color: rgb(75, 9, 9);
+    color: white;
+    
+    
+}
+.botao{
+    background-color: rgb(186, 241, 148);
+    align-items: center;
+    height: 40px;
+    width: 152;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+    font-size: 25px;
+
+}
+
+    </style>
+    <script>
+    window.onload = function () {
+    let clickDiv = document.getElementById("divID");
+    clickDiv.onclick = incrementClick;
+    let resetBtn = document.getElementById("reset-button");
+    resetBtn.onclick = resetCounter;
+    }
+    
+    var counterVal = 0;
+
+incrementClick = function() {
+    updateDisplay(++counterVal);
+}
+
+function resetCounter() {
+    counterVal = 0;
+    updateDisplay(counterVal);
+}
+
+function updateDisplay(val) {
+    document.getElementById("counter-label").innerHTML = val;
+}
+
+      
+  
+    </script>
+</head>
+<body>
+
+    <div class="principal col-dm-12 col-dg-12" >
+
+        <div class="secundaria"> Mickey
+            <div  onclick="votar()" id="divID">
+                <img src="img/candidato1.jpg" height="200" width="145">
+                <p>Numero de votos</p>
+                <p id="counter-label"></p>
+            </div>
+        </div>
+        <div class="secundaria">Minnie
+            <div onclick="votar()" id="divID">
+                <img src="img/candidato2.jpg" height="200" width="145">
+                <p>Numero de votos</p></div>
+                <p id="counter-label">
+        </div>
+        <div class="secundaria"> Pateta
+            <div  oonclick="votar()" id="divID">
+                <img src="img/candidato3.jpg" height="200" width="145">
+                <p class="numero">Numero de Votos</p></div>
+                <p id="counter-label"></p>
+        </div>
+        <div class="secundaria">Pluto
+             <div onclick="votar()" id="divID"><img src="img/candidato4.jpg" height="200" width="145" >
+                <p>Numero de votos</p></div>
+                <p id="counter-label"></p>
+        </div>
+
+    </div>
+
+    </div>
+  <center> <button class="botao" id="reset-button">Zerar Votação</button></center> 
+</body>
+</html>
