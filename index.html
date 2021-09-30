@@ -63,6 +63,18 @@
     resetBtn.onclick = resetCounter;
     }
     
+
+
+    window.onload = function () {
+    let clickDiv = document.getElementById("divID2");
+    clickDiv.onclick = incrementClick;
+    let resetBtn = document.getElementById("reset-button");
+    resetBtn.onclick = resetCounter;
+    }
+
+
+
+
     var counterVal = 0;
 
 incrementClick = function() {
@@ -94,13 +106,13 @@ function updateDisplay(val) {
             </div>
         </div>
         <div class="secundaria">Minnie
-            <div onclick="votar()" id="divID">
+            <div onclick="votar()" id="divID2">
                 <img src="img/candidato2.jpg" height="200" width="145">
                 <p>Numero de votos</p></div>
                 <p id="counter-label">
         </div>
         <div class="secundaria"> Pateta
-            <div  oonclick="votar()" id="divID">
+            <div  onclick="votar()" id="divID">
                 <img src="img/candidato3.jpg" height="200" width="145">
                 <p class="numero">Numero de Votos</p></div>
                 <p id="counter-label"></p>
